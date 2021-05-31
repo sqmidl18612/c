@@ -1935,7 +1935,9 @@ inline HBITMAP LoadResBmp(int nResId) {
 }
 
 // 入口过程
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
+				   LPSTR lpCmdLine, int nCmdShow) 
+{
   int i;
   MSG msg;
   WNDCLASSEX wce;
@@ -1972,7 +1974,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
   // 打开窗口
   Xqwl.hWnd = CreateWindow("XQWLIGHT", "象棋小巫师", WINDOW_STYLES,
-      CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, NULL, NULL, hInstance, NULL);
+      CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+	  NULL, NULL, hInstance, NULL);
   if (Xqwl.hWnd == NULL) {
     return 0;
   }
