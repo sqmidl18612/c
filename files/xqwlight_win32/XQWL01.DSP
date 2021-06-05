@@ -104,6 +104,10 @@ SOURCE=.\XQWL01.CPP
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
+SOURCE=.\RES\XQWIZARD.ICO
+# End Source File
+# Begin Source File
+
 SOURCE=.\XQWLIGHT.RC
 # End Source File
 # End Group
