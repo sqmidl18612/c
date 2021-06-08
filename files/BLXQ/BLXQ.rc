@@ -43,11 +43,14 @@ IDM_MAINMENU MENU DISCARDABLE
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "E&xit",                       IDM_EXIT
+        MENUITEM "我先走(&R)",                  IDM_FILE_RED
+        MENUITEM "电脑先走(&B)",                IDM_FILE_BLACK
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About ...",                  IDM_ABOUT
+        MENUITEM "&About ...",                  IDM_HELP_ABOUT
+        MENUITEM "&Home",                       IDM_HELP_HOME
     END
 END
 
