@@ -31,6 +31,9 @@
 #define IDB_BR                          142
 #define IDB_BC                          143
 #define IDB_BP                          144
+#define IDR_CLICK                       145
+#define IDR_CAPTURE                     146
+#define IDR_MOVE                        147
 #define IDM_FILE_RED                    32771
 #define IDM_FILE_BLACK                  32772
 #define IDM_HELP_HOME                   32773
@@ -41,7 +44,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        145
+#define _APS_NEXT_RESOURCE_VALUE        148
 #define _APS_NEXT_COMMAND_VALUE         32775
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           110

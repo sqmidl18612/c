@@ -137,6 +137,15 @@ IDB_BP                  BITMAP  DISCARDABLE     "BP.BMP"
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// WAVE
+//
+
+IDR_CLICK               WAVE    DISCARDABLE     "CLICK.WAV"
+IDR_CAPTURE             WAVE    DISCARDABLE     "CAPTURE.WAV"
+IDR_MOVE                WAVE    DISCARDABLE     "MOVE.WAV"
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 

@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include "resource.h"
+#include "mmsystem.h"
 
 #define MAX_LOADSTRING 100
 
@@ -395,6 +396,11 @@ static void DrawSquare(int sq, BOOL bSelected = FALSE) {
     DrawTransBmp(Xqwl.hdc, Xqwl.hdcTmp, xx, yy, Xqwl.bmpSelected);
   }
 }
+// 播放资源声音
+inline void PlayResWav(int nResId) {
+  PlaySound(MAKEINTRESOURCE(nResId), Xqwl.hInst, SND_ASYNC | SND_NOWAIT | SND_RESOURCE);
+}
+
 // "DrawSquare"参数
 const BOOL DRAW_SELECTED = TRUE;
 
@@ -418,7 +424,7 @@ static void ClickSquare(int sq) {
       DrawSquare(SRC(Xqwl.mvLast));
       DrawSquare(DST(Xqwl.mvLast));
     }
-//    PlayResWav(IDR_CLICK); // 播放点击的声音
+    PlayResWav(IDR_CLICK); // 播放点击的声音
 
   } else if (Xqwl.sqSelected != 0) {
     // 如果点击的不是自己的子，但有子选中了(一定是自己的子)，那么走这个子
@@ -427,7 +433,7 @@ static void ClickSquare(int sq) {
     DrawSquare(Xqwl.sqSelected, DRAW_SELECTED);
     DrawSquare(sq, DRAW_SELECTED);
     Xqwl.sqSelected = 0;
-//    PlayResWav(pc == 0 ? IDR_MOVE : IDR_CAPTURE); // 播放走子或吃子的声音
+    PlayResWav(pc == 0 ? IDR_MOVE : IDR_CAPTURE); // 播放走子或吃子的声音
   }
   DeleteDC(Xqwl.hdcTmp);
   ReleaseDC(Xqwl.hWnd, Xqwl.hdc);
